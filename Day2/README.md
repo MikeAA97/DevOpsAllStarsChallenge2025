@@ -1,7 +1,7 @@
 # Day 2
 
 ## NBA-API Terraform Module
-This project provides a Terraform module to automate the retrieval and delivery of NBA game information using AWS services. The module performs the following:
+This project provides a Terraform module to automate the retrieval and delivery of NBA game information using AWS services. The module creates the following:
 
 ### Lambda Function
 Deploys an AWS Lambda function that queries the SportsData.io API for up-to-date NBA game information.
