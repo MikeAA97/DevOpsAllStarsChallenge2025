@@ -3,7 +3,7 @@
 This project provides a Terraform module to automate the deployment of an AWS Data Lake which consists of the following resources: 
 
 #### AWS Lambda Function
-Deploys an AWS Lambda function that queries the SportsData.io API for player information, transform the data, and sends it off to S#.
+Deploys an AWS Lambda function that queries the SportsData.io API for player information, transform the data, and sends it off to S3.
 #### AWS S3 Bucket
 Holds all the raw-data, and serves as the output location for Athena queries.
 #### AWS Glue Database / Table
