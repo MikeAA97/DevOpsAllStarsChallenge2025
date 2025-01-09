@@ -58,8 +58,3 @@ def lambda_handler(event, context):
     except Exception as e:
         print(f"Error Retrieving Data from API: {e}")
         return {"statusCode": 500, "body": "Error Retrieving Data"}
-
-        
-
-
-    
