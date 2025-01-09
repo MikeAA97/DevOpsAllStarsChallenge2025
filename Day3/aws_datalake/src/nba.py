@@ -3,7 +3,7 @@ import json
 import urllib.request
 import os
 
-# Create AWS clients
+
 s3_client = boto3.client("s3")
 
 NBA_API_KEY  = os.getenv("NBA_API_KEY")
@@ -12,8 +12,6 @@ S3_BUCKET    = os.getenv("S3_BUCKET")
 
 api_url = f"{NBA_ENDPOINT}?key={NBA_API_KEY}"
     
-
-
 def fetch_nba_data():
     """Fetch NBA player data from sportsdata.io."""
     try:
@@ -53,8 +51,6 @@ def upload_data_to_s3(data):
 
 
 def lambda_handler(event, context):
-    # Get environment variables
-
     try:
         nba_data = fetch_nba_data()
         upload_data_to_s3(nba_data)
