@@ -16,32 +16,32 @@ Custom Workgroup is configured with a template-query. Leverages the AWS Glue Cat
 
 1. **Navigate to the Terraform Directory**  
    Navigate to the `terraform` directory.
-<br>
 2. **Populate the `terraform.tfvars` file**
     Run the `populate_tfvars.sh` script to generate the `terraform.tfvars` file with your sportsdata.io token.  
     *Note:* You may need to adjust the script's permissions using:  
      `chmod u+x populate_tfvars.sh`
-<br>
-1. **Configure AWS Credentials**
+3. **Configure AWS Credentials**
     Ensure your AWS credentials are properly set up and accessible. You can verify this by checking the `~/.aws/credentials`
-<br>
-1. **Initialize the Environment**
+4. **Initialize the Environment**
 Run the following command to initialize the terraform environment.
-`terraform init`
-<br>
-1. **Preview the Changes**
+
+   `terraform init`
+
+5. **Preview the Changes**
 Run the following command to preview the resources that will be created:
-`terraform plan`
-<br>
-1. **Apply the Configuration**
+
+   `terraform plan`
+
+
+6. **Apply the Configuration**
 If you are satisfied with the plan, apply the changes to create the resources:
-`terraform apply --auto-approve`
+
+   `terraform apply --auto-approve`
 
 ## Next-Steps
 1. **Run the AWS Lambda**
 Navigate to the AWS Lambda UI, and ensure a test or real run of the Lambda script happens. This will generate and push data to your S3 Bucket.
-<br>
-1. **Run an Athena Query**
+2. **Run an Athena Query**
     1. Navigate to the AWS Athena UI. 
     2. Switch to the nba_analytics workgroup.
     3. Execute the test query
@@ -50,4 +50,5 @@ Navigate to the AWS Lambda UI, and ensure a test or real run of the Lambda scrip
 ## Clean-Up
 
 To avoid unintended costs you should destroy the resources if not in use. To do this, simply run
-`terraform destroy --auto-approve`
+
+   `terraform destroy --auto-approve`
